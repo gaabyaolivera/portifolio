@@ -94,7 +94,8 @@ nav a {
 }
 
 .linguagens img{
-    width: 127px;
+    width: 60px;
+    margin-bottom: 15px;
 }
 .skills {
     display: flex;

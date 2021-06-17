@@ -2,172 +2,125 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+ul {
     list-style-type: none;
 }
-body {
-    font-family: 'Work Sans', sans-serif;
-    background-color: #FDEF89;
-    max-width: 1447px;
+
+a {
+    text-decoration: none;
 }
-#size {
-    margin: 0px 100px;
-}
-/* header */
-nav ul {
+
+/* Header */
+.header {
+    background: #7C5E99;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
-    margin-top: 10px;
+    border-bottom: 10px solid #000;
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+}
+
+.header ul {
+    display: flex;
+}
+
+.header a {
+    display: block;
+    padding: 10px;
+    color: white;
+}
+
+.header li a::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #F25A70;
     margin-right: 10px;
 }
 
-nav a {
-    display: block;
-    padding: 5px;
-    color: #676465;
+.header button {
+    background: #F25A70;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    border: none;
+    margin-right: 20px;
+    font-size: 1em;
 }
-.header-container {
+
+.header button a {
+    box-shadow: 5px 5px black;
+}
+
+/* Home */
+
+.home {
+    background-image: url(../img/code.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 100px;
-    /* width: 744px; */
-}
-.header-container h1 {
-    font-size: 2.5em;
-    color: #FC7879;
-    margin-bottom: 17px;
-}
-
-.header-container p {
-    color: #676465;
-    margin-bottom: 10px;
-}
-
-.header-container a {
-    color: #676465;
-    text-decoration: underline;
-}
-
-.wave-hand {
-    width: 59px;
-}
-.illustration {
-    max-width: 50%;
-}
-
-/* projetos */
-#projetos-container h1, #sobre-container h1, #contato-container h1{
-    font-size: 2em;
-    color: #FC7879;
-    text-align: center;
-    margin: 50px 0px;
-}
-
-.projetos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
-    grid-row-gap: 30px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.projetos img {
-    width: 250px;
-}
-
-/* sobre */
-.sobre-informacoes {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
-.sobre-informacoes img{
-    border-radius: 50%;
+.home .content {
+    width: 788px;
+    height: 200px;
+    background-color: #3A4042;
+    text-align: center;
+    box-shadow: 10px 10px black;
+    font-family: 'Revalia', cursive;
+    
 }
-
-.sobre-informacoes p {
-    color: #676465;
-    margin-left: 20px;
-}
-
-.linguagens img{
-    width: 60px;
-    margin-bottom: 15px;
-}
-.skills {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-.barra-skill-html {
-    width: 800px;
-    height: 10px;
-    background-color: #FC7879;
-    margin-left: 10px;
-}
-
-.barra-skill-css {
-    width: 600px;
-    height: 10px;
-    background-color: #FC7879;
-    margin-left: 10px;
-}
-
-.barra-skill-js {
-    width: 300px;
-    height: 10px;
-    background-color: #FC7879;
-    margin-left: 10px;
-}
-
-/* contato */
-.contato {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.contato img{
-    width: 55px;
-}
-/* footer */
-
-footer {
-    background-color: #FC7879;
-    height: 70px;
+.home h1 {
+    color: #F25A70;
+    font-size: 2.5em;
     margin-top: 50px;
+    text-shadow: 4px 4px 0px #000000;
+}
+.home h2 {
+    padding-top: 20px;
+    text-shadow: 4px 4px 0px #000000;
 }
 
-/* media query */
+.btn {
+    padding-top: 60px;
+}
 
-@media (max-width: 900px) {
-    #size {
-        margin: 0px 50px;
+.btn a {
+    background: #F25A70;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    margin-right: 50px;
+    box-shadow: 5px 5px black;
+}
+
+@media only screen and (max-width: 830px) {
+    .home .content {
+        width: 700px;
     }
 }
 
-@media (max-width: 606px) {
-    #size {
-        margin: 0px 30px;
-    }
-
-    .illustration {
-        display: none;
+@media only screen and (max-width: 730px) {
+    .home .content {
+        width: 600px;
     }
 }
 
-@media (max-width: 580px) {
-    .projetos {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: auto;
+@media only screen and (max-width: 630px) {
+    .home .content {
+        width: 550px;
     }
-    .projetos img {
-        width: 350px;
-    }
-
-    /* ajustar a área linguagens aqui */
 }
